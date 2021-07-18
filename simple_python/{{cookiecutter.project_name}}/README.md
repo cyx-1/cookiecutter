@@ -1,8 +1,11 @@
 # Setup
-- test driven development
-    - Run "pytest -f" to watch any changes in this project
 - setup virtual environment with a folder called env
     - Run "python -m venv env"
 - enter virtual environment
     - Run ". ./env/bin/activate"
-- logging as basic foundation
+- test driven development
+    - Run "pytest -f" to watch any changes in this project
+- useful pip commands
+    - Install packages using requirements.txt: "python -m pip install -r requirements.txt"
+    - Uninstall all packages mentioned in requirements.txt: "python -m pip uninstall -r requirements.txt -y"
+    - Freeze package version into requirements.txt: "python -m pip freeze > requirements.txt"
