@@ -2,7 +2,11 @@
 - setup virtual environment with a folder called env
     - Run "python -m venv env"
 - enter virtual environment
-    - Run ". ./env/bin/activate"
+    - Run ". ./env/bin/activate" on Mac OS
+    - Run ".\env\Scripts\activate" on Windows
+- exit virtual envioronment
+    - Run "deactivate" on Mac OS
+    - Run ".\env\Scripts\deactivate" on Windows
 - test driven development
     - Run "pytest -f" to watch any changes in this project
 - useful pip commands
