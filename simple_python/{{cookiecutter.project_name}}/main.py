@@ -1,5 +1,8 @@
 import logging
 import sys
+from typing import List
+
+logger = logging.getLogger(__name__)
 
 
 def configure_logging():
@@ -7,7 +10,12 @@ def configure_logging():
     logging.basicConfig(format=FORMAT, datefmt='%Y-%m-%d:%H:%M:%S', stream=sys.stdout, level=logging.INFO)
 
 
+def do_something(things: List[str]):
+    for thing in things:
+        logger.info(f'hello world {thing}')
+
+
 if __name__ == "__main__":
     configure_logging()
-    logger = logging.getLogger(__name__)
     logger.info("hello")
+    do_something(['test', 'test2'])
