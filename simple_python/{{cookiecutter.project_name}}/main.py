@@ -2,6 +2,8 @@ import logging
 import sys
 from typing import List
 
+from __init__ import __version__
+
 logger = logging.getLogger(__name__)
 
 
@@ -15,7 +17,7 @@ def do_something(things: List[str]):
         logger.info(f'hello world {thing}')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     configure_logging()
-    logger.info("hello")
+    logger.info(f'Starting program version: {__version__}')
     do_something(['test', 'test2'])

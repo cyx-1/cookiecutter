@@ -1,4 +1,11 @@
-# Setup
+# About this project
+- supports pre-commit installed via pipx so that quality checks run prior to commit
+    - black, flake8, package sort, single-quotes, json, yaml, trailing-white-spaces
+    - can add more here: https://pre-commit.com/hooks.html
+- supports pytest so that unit test runs during development
+- requires venv way of handling virtual environment
+- supports a simple version numbering scheme
+# Setup Information
 - setup pre-commit to auto-improve on code quality
     - Assuming that pre-commit is installed via pipx
     - pre-commit install
@@ -12,8 +19,12 @@
     - Run ".\env\Scripts\deactivate" on Windows
 - test driven development
     - Run "pytest -f" to watch any changes in this project
-- useful commands
+- useful reference information
     - Install packages using requirements.txt: "python -m pip install -r requirements.txt"
     - Uninstall all packages mentioned in requirements.txt: "python -m pip uninstall -r requirements.txt -y"
     - Freeze package version into requirements.txt: "python -m pip freeze > requirements.txt"
     - Update pre-commit packages: pre-commit autoupdate
+    - version kept at __init__.py
+
+# TODO
+- add ability to turn into a package and deal with version information via setup.cfg
