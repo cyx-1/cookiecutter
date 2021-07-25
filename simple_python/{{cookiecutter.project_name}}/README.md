@@ -1,4 +1,7 @@
 # Setup
+- setup pre-commit to auto-improve on code quality
+    - Assuming that pre-commit is installed via pipx
+    - pre-commit install
 - setup virtual environment with a folder called env
     - Run "python -m venv env"
 - enter virtual environment
@@ -9,7 +12,8 @@
     - Run ".\env\Scripts\deactivate" on Windows
 - test driven development
     - Run "pytest -f" to watch any changes in this project
-- useful pip commands
+- useful commands
     - Install packages using requirements.txt: "python -m pip install -r requirements.txt"
     - Uninstall all packages mentioned in requirements.txt: "python -m pip uninstall -r requirements.txt -y"
     - Freeze package version into requirements.txt: "python -m pip freeze > requirements.txt"
+    - Update pre-commit packages: pre-commit autoupdate
