@@ -14,7 +14,7 @@
 - enter virtual environment
     - Run ". ./env/bin/activate" on Mac OS
     - Run ".\env\Scripts\activate" on Windows
-- exit virtual envioronment
+- exit virtual environment
     - Run "deactivate" on Mac OS
     - Run ".\env\Scripts\deactivate" on Windows
 - test driven development
