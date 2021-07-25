@@ -1,0 +1,13 @@
+repos:
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.1.0
+  hooks:
+  - id: pretty-format-java
+    args: [--autofix, --aosp] # Android OS Programming format style
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.1  # Use the ref you want to point at
+  hooks:
+  - id: check-merge-conflict
+  - id: check-json
+  - id: check-yaml
+  - id: trailing-whitespace
