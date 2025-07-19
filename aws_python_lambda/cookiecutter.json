@@ -1,0 +1,4 @@
+{
+    "project_name": "my_lambda_project",
+    "lambda_function_name": "my-lambda-function"
+}

@@ -1,0 +1,9 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "AWS Lambda function project"
+requires-python = ">=3.11"
+
+dependencies = [
+    "boto3"
+]
