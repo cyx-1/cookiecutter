@@ -3,9 +3,10 @@ name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = []
 
+# [dependency-groups] is the uv way of specifying dev dependencies, which gets picked up by uv sync
 [dependency-groups]
 dev = [
     "pytest",
