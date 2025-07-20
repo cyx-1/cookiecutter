@@ -1,5 +1,7 @@
 {
     "project_name": "my_lambda_project",
     "lambda_function_name": "my-lambda-function",
-    "cookiecutter.python_version_for_black": "3.11"
+    "_lambda_function_name": "The name of your Lambda function, don't use the underscore character",
+    "cookiecutter.python_version_for_black": "3.11",
+    "_cookiecutter.python_version_for_black": "Python version used to install pre-commit in pipx"
 }
