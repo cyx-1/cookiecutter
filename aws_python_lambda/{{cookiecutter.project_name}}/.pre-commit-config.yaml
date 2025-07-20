@@ -1,0 +1,29 @@
+repos:
+-   repo: https://github.com/psf/black
+    rev: 25.1.0  # Latest as of July 2025
+    hooks:
+    - id: black
+      # specifies which Python intepreter version should be used to run this hook
+      # it should be consistent with the python version used to install pre-commit in pipx
+      language_version: python3.11
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0  # Latest as of July 2025
+    hooks:
+    - id: check-merge-conflict
+    - id: check-json
+      exclude: \.vscode/launch\.json$
+    - id: check-yaml
+      exclude: ^template\.yaml$
+    - id: trailing-whitespace
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.0.0  # Latest as of July 2025
+    hooks:
+    - id: flake8
+-   repo: https://github.com/asottile/seed-isort-config  # Archived, no new releases
+    rev: v2.2.0
+    hooks:
+    - id: seed-isort-config
+-   repo: https://github.com/pre-commit/mirrors-isort  # Archived, no new releases
+    rev: v5.10.1
+    hooks:
+    - id: isort

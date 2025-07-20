@@ -1,16 +1,16 @@
+import json
 import os
-import zipfile
 import subprocess
+import sys
+import time
+import zipfile
 
 import boto3  # type: ignore
-import time
-import sys
-import json
 
 LAMBDA_FUNCTION_NAME = "{{ cookiecutter.lambda_function_name }}"
 TEMPLATE_FILE = "template.yaml"
-S3_BUCKET = 'cyx-lambda-binary'
-S3_KEY = f'{LAMBDA_FUNCTION_NAME}.zip'
+S3_BUCKET = "cyx-lambda-binary"
+S3_KEY = f"{LAMBDA_FUNCTION_NAME}.zip"
 ZIP_NAME = "lambda_package.zip"
 region = "us-east-1"
 
@@ -108,7 +108,9 @@ def update_lambda():
 
     start = time.time()
     upload_to_s3()
-    print(f"Uploaded {ZIP_NAME} to s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds")
+    print(
+        f"Uploaded {ZIP_NAME} to s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds"
+    )
 
     delete_file(ZIP_NAME)
 
@@ -153,11 +155,21 @@ def invoke_lambda() -> None:
 def delete_lambda():
     start = time.time()
     delete_s3_object()
-    print(f"Deleted S3 object s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds")
+    print(
+        f"Deleted S3 object s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds"
+    )
 
     start = time.time()
     subprocess.run(
-        ["aws", "cloudformation", "delete-stack", "--stack-name", LAMBDA_FUNCTION_NAME, "--region", region],
+        [
+            "aws",
+            "cloudformation",
+            "delete-stack",
+            "--stack-name",
+            LAMBDA_FUNCTION_NAME,
+            "--region",
+            region,
+        ],
         check=True,
     )
     print(f"Deleted Lambda function in {time.time() - start:.2f} seconds")
@@ -165,7 +177,15 @@ def delete_lambda():
     start = time.time()
     while True:
         result = subprocess.run(
-            ["aws", "cloudformation", "describe-stacks", "--stack-name", LAMBDA_FUNCTION_NAME, "--region", region],
+            [
+                "aws",
+                "cloudformation",
+                "describe-stacks",
+                "--stack-name",
+                LAMBDA_FUNCTION_NAME,
+                "--region",
+                region,
+            ],
             capture_output=True,
             text=True,
         )
@@ -186,7 +206,9 @@ def deploy_lambda():
 
     start = time.time()
     upload_to_s3()
-    print(f"Uploaded {ZIP_NAME} to s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds")
+    print(
+        f"Uploaded {ZIP_NAME} to s3://{S3_BUCKET}/{S3_KEY} in {time.time() - start:.2f} seconds"
+    )
 
     delete_file(ZIP_NAME)
     start = time.time()
@@ -225,10 +247,16 @@ if __name__ == "__main__":
 
     if len(sys.argv) < 2:
         print("Usage: uv run aws.py [update, invoke, delete, deploy]")
-        print("uv run aws.py update -> to quickly update the Lambda function by zipping and uploading the code to S3")
+        print(
+            "uv run aws.py update -> to quickly update the Lambda function by zipping and uploading the code to S3"
+        )
         print("uv run aws.py invoke -> to invoke the Lambda function")
-        print("uv run aws.py delete -> to delete the entire stack and associated resources")
-        print("uv run aws.py deploy -> to completely delete and deploy the entire stack from scratch")
+        print(
+            "uv run aws.py delete -> to delete the entire stack and associated resources"
+        )
+        print(
+            "uv run aws.py deploy -> to completely delete and deploy the entire stack from scratch"
+        )
         sys.exit(1)
     if sys.argv[1] == "update":
         start = time.time()
