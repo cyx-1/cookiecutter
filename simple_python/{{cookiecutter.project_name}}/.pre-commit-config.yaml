@@ -1,23 +1,26 @@
 repos:
 -   repo: https://github.com/psf/black
-    rev: 21.7b0
+    rev: 25.1.0  # Latest as of July 2025
     hooks:
     - id: black
-      language_version: python{{cookiecutter.python_version}} # consistent with installed python version
+      language_version: python3.11 # consistent with installed python version
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0  # Use the ref you want to point at
+    rev: v5.0.0  # Latest as of July 2025
     hooks:
-    - id: flake8
     - id: check-merge-conflict
     - id: double-quote-string-fixer
     - id: check-json
     - id: check-yaml
     - id: trailing-whitespace
--   repo: https://github.com/asottile/seed-isort-config
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.0.0  # Latest as of July 2025
+    hooks:
+    - id: flake8
+-   repo: https://github.com/asottile/seed-isort-config  # Archived, no new releases
     rev: v2.2.0
     hooks:
     - id: seed-isort-config
--   repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.9.2
+-   repo: https://github.com/pre-commit/mirrors-isort  # Archived, no new releases
+    rev: v5.10.1
     hooks:
     - id: isort

@@ -1,2 +1,0 @@
-pytest==6.2.4 # core
-pytest-xdist==2.3.0 # core

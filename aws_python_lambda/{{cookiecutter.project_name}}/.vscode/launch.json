@@ -5,11 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "main.py | {{cookiecutter.project_name}}",
+            "name": "aws.py to work with Lambda",
             "type": "debugpy",
             "request": "launch",
-            "program": "main.py",
-            "console": "integratedTerminal"
+            "program": "aws.py",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}"
         }
     ]
 }

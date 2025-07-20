@@ -15,12 +15,17 @@ def main():
 
 def configure_logging():
     FORMAT = '%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s'
-    logging.basicConfig(format=FORMAT, datefmt='%Y-%m-%d:%H:%M:%S', stream=sys.stdout, level=logging.INFO)
+    logging.basicConfig(
+        format=FORMAT,
+        datefmt='%Y-%m-%d:%H:%M:%S',
+        stream=sys.stdout,
+        level=logging.INFO,
+    )
     logger.info('hello')
 
 
 def do_something(things: List[str]):
-    '''do_something documentation'''
+    """do_something documentation"""
     for thing in things:
         logger.info(f'hello world {thing}')
 
