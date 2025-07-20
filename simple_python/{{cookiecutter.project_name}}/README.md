@@ -1,8 +1,9 @@
 # About this project
-- supports pre-commit installed via pipx so that quality checks run prior to commit
+- supports [pre-commit](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27) so that quality checks are part of commit routine
+    - installed via [pipx](https://gist.github.com/cyx-1/33cee67d33e46873e35617abe5e0ad7f)
     - black, flake8, package sort, single-quotes, json, yaml, trailing-white-spaces
     - can add more here: https://pre-commit.com/hooks.html
-- uses uv to manage project
+- uses [uv](https://gist.github.com/cyx-1/6a2055ef453ca1bd54f8fd125fd19e6b) to manage project
 - supports pytest so that unit test runs during development
 - supports a simple version numbering scheme
 
