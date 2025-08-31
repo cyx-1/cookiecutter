@@ -13,20 +13,12 @@ dev = [
     "pytest-xdist"
 ]
 
-[tool.black]
+
+
+[tool.ruff]
 line-length = 130
-include = '\.pyi?$'
-skip_string-normalization = true
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+lint.ignore = ["E203", "E266"]
+lint.select = [
+    "I",  # Enable import sorting
+]
+lint.mccabe.max-complexity = 18

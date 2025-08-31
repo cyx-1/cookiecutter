@@ -1,7 +1,7 @@
 # About this project
 - supports [pre-commit](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27) so that quality checks are part of commit routine
     - installed via [pipx](https://gist.github.com/cyx-1/33cee67d33e46873e35617abe5e0ad7f)
-    - black, flake8, package sort, single-quotes, json, yaml, trailing-white-spaces
+    - ruff, json, yaml, trailing-white-spaces
     - can add more here: https://pre-commit.com/hooks.html
 - uses [uv](https://gist.github.com/cyx-1/6a2055ef453ca1bd54f8fd125fd19e6b) to manage project
 - supports pytest so that unit test runs during development
@@ -22,15 +22,12 @@
         ```
     - next time prior to committing code via git, you will see the following checks
         ```
-        black....................................................................Passed
+        ruff check...............................................................Passed
+        ruff format..............................................................Passed
         check for merge conflicts................................................Passed
-        fix double quoted strings................................................Passed
         check json...........................................(no files to check)Skipped
         check yaml...............................................................Passed
         trim trailing whitespace.................................................Passed
-        flake8...................................................................Passed
-        seed isort known_third_party.............................................Passed
-        isort....................................................................Passed
         ```
 - use uv to set up virtual environment and retrieve library dependencies
     ```
