@@ -2,8 +2,9 @@ import os
 import subprocess
 
 def run_command():
-    # Example: Run a shell command in the generated project directory
-    subprocess.run(["cmd", "/c", "echo Hello from post_gen_project!"], check=True)
+    # activate virtual environment, git and establish local main branch
+    subprocess.run(["cmd", "/c", "echo activating git, git local main branch, and uv library installation"], check=True)
+    subprocess.run(["cmd", "/c", "cd {{ cookiecutter.project_name }}; git init; git branch -M main; uv sync"], check=True)
 
 if __name__ == "__main__":
     run_command()
