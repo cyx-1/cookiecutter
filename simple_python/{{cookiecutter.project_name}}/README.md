@@ -1,9 +1,11 @@
 # About this project
-- supports [pre-commit](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27) so that quality checks are part of commit routine
-    - installed via [pipx](https://gist.github.com/cyx-1/33cee67d33e46873e35617abe5e0ad7f)
-    - ruff, json, yaml, trailing-white-spaces
-    - can add more here: https://pre-commit.com/hooks.html
-- uses [uv](https://gist.github.com/cyx-1/6a2055ef453ca1bd54f8fd125fd19e6b) to manage project
+- this project uses [uv](https://gist.github.com/cyx-1/6a2055ef453ca1bd54f8fd125fd19e6b) extensively to manage tools, libraries, and python version
+- the following tools should be already installed via ```uv tool install``` with versions greater or equal to:
+    - pre-commit v4.3.0, cookiecutter v2.6.0, ruff v0.12.11
+- python should be already installed via ```uv python install 3.10, 3.11, 3.12, 3.13```
+- this project's [pre-commit](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27) uses: ruff, json, yaml, trailing-white-spaces
+- this project uses python version: {{ cookiecutter.python_version }}
+    - to use a different python version, change the version in .python-version and then verify via ```uv run python --version```
 - supports pytest so that unit test runs during development
 - supports a simple version numbering scheme
 
