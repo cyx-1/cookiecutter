@@ -1,4 +1,13 @@
 {
     "project_name": "simple_python",
-    "python_version": "3.10, 3.11, 3.12, 3.13"
+    "python_version": [
+        "3.13",
+        "3.10",
+        "3.11",
+        "3.12"
+    ],
+    "__prompts__": {
+        "project_name": "Enter the project name (press Enter for simple_python):",
+        "python_version": "Choose a Python version (press Enter for 3.13):"
+    }
 }
