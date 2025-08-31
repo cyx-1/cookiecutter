@@ -20,12 +20,14 @@
 
         output should say: pre-commit installed at .git\hooks\pre-commit
         ```
-    - next time prior to committing code via git, you will see the following checks
+    - you will see the following checks next time:
+        - prior to committing code via git
+        - or after running this command ```pre-commit run --all-files```
         ```
         ruff check...............................................................Passed
         ruff format..............................................................Passed
         check for merge conflicts................................................Passed
-        check json...........................................(no files to check)Skipped
+        check json...............................................................Passed
         check yaml...............................................................Passed
         trim trailing whitespace.................................................Passed
         ```
