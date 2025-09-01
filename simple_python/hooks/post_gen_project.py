@@ -5,6 +5,7 @@ def run_command():
         ["git", "init"],
         ["git", "branch", "-M", "main"],
         ["uv", "sync"],
+        ["pre-commit", "install"],
         ["git", "add", "-A"],
         ["git", "commit", "-m", "Initial commit"],
         ["git", "log", "--oneline"]
