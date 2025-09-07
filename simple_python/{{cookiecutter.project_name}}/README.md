@@ -1,11 +1,11 @@
 # About this project
-- this project uses [uv](https://gist.github.com/cyx-1/6a2055ef453ca1bd54f8fd125fd19e6b) extensively to manage tools, libraries, and python version
+- this project uses [uv](https://cyx-1.github.io/notes_technology/uv.html) extensively to manage tools, libraries, and python version
 - the following tools should be already installed via ```uv tool install``` with versions greater or equal to:
-    - [pre-commit v4.3.0](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27)
-    - [cookiecutter v2.6.0](https://gist.github.com/cyx-1/1f54b5b273db41f62850b58d7cf11964)
-    - [ruff v0.12.11](https://gist.github.com/cyx-1/b24a878c2876ce6ba4c4ff0f8ab1e22f)
+    - [pre-commit v4.3.0](https://cyx-1.github.io/notes_technology/pre-commit.html)
+    - [cookiecutter v2.6.0](https://cyx-1.github.io/notes_technology/cookiecutter.html)
+    - [ruff v0.12.11](https://cyx-1.github.io/notes_technology/ruff.html)
 - python should be already installed via ```uv python install 3.10, 3.11, 3.12, 3.13```
-- this project's [pre-commit](https://gist.github.com/cyx-1/938dd1793b4da06012cf143587b5dd27) uses: ruff, json, yaml, trailing-white-spaces
+- this project's [pre-commit](https://cyx-1.github.io/notes_technology/pre-commit.html) uses: ruff, json, yaml, trailing-white-spaces
     - pre-commit has pre and post hook logic to validate and activate git, uv, pre-commit and so on
 - this project uses python version: {{ cookiecutter.python_version }}
 

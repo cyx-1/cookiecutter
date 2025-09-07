@@ -10,6 +10,7 @@ def run_command():
         ["git", "add", "-A"],
         ["git", "commit", "-m", "Initial commit"],
         ["git", "log", "--oneline"],
+        ["uv", "run", "pytest"],
     ]
     for cmd in commands:
         subprocess.run(cmd, check=True)
@@ -17,8 +18,10 @@ def run_command():
     print("\n\n\nSuccessfully activated virtual environment")
     print("using python version {{ cookiecutter.python_version }}.")
     print("Performed uv sync to retrieve all the dependencies.")
+    print("Installed pre-commit hooks.")
     print("Initialized Git and created the local main branch.")
     print("Staged and committed all changes to local git repository.")
+    print("Ran a quick test using pytest.")
     print("\nTo push changes to a remote repository:")
     print("git remote add origin git@github.com:user/repo.git")
     print("git push -u origin main")
